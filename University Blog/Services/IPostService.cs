@@ -1,0 +1,14 @@
+﻿using University_Blog.Models;
+
+namespace University_Blog.Services
+{
+    public interface IPostService
+    {
+        public Task<int> AddPost(PostDTO model);
+        public Task<List<PostDTO>> GetAllPosts();
+        public Task<PostDTO> GetPostById(int id);
+        public Task UpdatePost(int id, PostDTO model);
+        public Task DeletePost(int id);
+        public Task<IEnumerable<PostDTO>> GetPostsByTitle(string title);
+    }
+}
